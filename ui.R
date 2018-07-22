@@ -16,15 +16,13 @@ shinyUI(dashboardPage(
                    label = "Select gene",
                    multiple = TRUE,
                    selected=c("Id4","Gfap"),
-                   options = list(maxOptions=30000),
                    choices = pbmc@var.genes),
     
     selectizeInput(inputId = "focus.clusters",
                    label = "Select cell type",
                    multiple = TRUE,
                    selected=c("RGL-1", "RGL-2", "NPC", "neuroblast"),
-                   options = list(maxOptions=30000),
-                   choices = sort(pbmc.markers$cluster))
+                   choices = sort(unique(pbmc.markers$cluster)))
     
     ),
   
@@ -41,7 +39,7 @@ shinyUI(dashboardPage(
     tabItems(
       tabItem(tabName = "intro",
         fluidRow(
-          img(src="Shiny_app_cover.pdf", width="80%")
+          img(src="Shiny_app_cover.jpg", width="80%")
           )
                     
       ),
