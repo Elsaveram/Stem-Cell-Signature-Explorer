@@ -66,7 +66,7 @@ shinyServer(function(input, output, session) {
     
     DoHeatmap(object = pbmc, cells.use = focus.cells, genes.use = top_genes$gene, slim.col.label = TRUE, group.order = input$focus.clusters, col.low="#330099",col.mid = "#000000", col.high = "#CC0000")
     
-  })
+  }, height=800)
   
   
 })
