@@ -38,10 +38,9 @@ shinyUI(dashboardPage(
     
     tabItems(
       tabItem(tabName = "intro",
-        fluidRow(
-          img(src="Shiny_app_cover.jpg", width="80%")
-          )
-                    
+          fluidRow(
+            img(src="Shiny_app_cover.jpg", width="80%")
+          )        
       ),
       tabItem(tabName = "tSNE",
         h1("Which clusters are stem cells?"),
@@ -68,7 +67,7 @@ shinyUI(dashboardPage(
       
       tabItem(tabName = "heatmaps",
               h1("Cell type-specific signatures. What genes are expressed by each cell type?"),
-              fluidRow(column(6, plotOutput("HeatMapPlot")))
+              fluidRow(column(12, plotOutput("HeatMapPlot")))
       )
     )
   )
